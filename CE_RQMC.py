@@ -1,11 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Iterative CE with RQMC — Per‑Obligor VaRC and SE
--------------------------------------------------
-Uses a FIXED, user‑provided loss_threshold (no E[L] or internal threshold calculation).
-"""
-
 import numpy as np
 import time
 from dataclasses import dataclass
@@ -13,7 +7,6 @@ from typing import Tuple, Optional
 
 from scipy.stats import norm, beta, qmc
 from tqdm import tqdm
-
 
 np.random.seed(42)
 
@@ -176,7 +169,7 @@ def run_ce_rqmc_per_obligor(
     a_var: float = 1.1432,
     delta: float = 0.005,
     q_tail: float = 0.5,
-    loss_threshold: float = 0.6035668192876804,  # FIXED threshold from user
+    loss_threshold: float = 0.6035668192876804,  # FIXED threshold
     P: int = 2_000_000,
     K: int = 10_000_000,
     max_iter: int = 20,
@@ -215,7 +208,7 @@ if __name__ == "__main__":
         N=10,
         a_var=1.1432,
         delta=0.005,
-        loss_threshold=0.6035668192876804,  # use provided l
+        loss_threshold=0.6035668192876804,  # calculated independently
         P=2_000_000,
         K=10_000_000,
         # demo
