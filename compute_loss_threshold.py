@@ -69,7 +69,7 @@ def generate_samples_pmc(d, LGD_a, LGD_b, simulation_runs):
     return L
 
 EL = np.mean([generate_samples_pmc(d, LGD_a, LGD_b, simulation_runs) for _ in range(n_repetitions)])
-loss_threshold = 3 * EL # 0.6035668192876804
+loss_threshold = 3 * EL
 
 
 

@@ -196,7 +196,7 @@ if __name__ == "__main__":
         # alpha = 0.95, 0.96, 0.97, 0.98, 0.99
         # VaR estimate = 1.1432 1.3098 1.5397 1.8733 2.4625
 
-        a_var=1.1432,
+        a_var=2.4625,
         
         delta=0.005,
         loss_threshold=0.6035668192876804, # calculated independently

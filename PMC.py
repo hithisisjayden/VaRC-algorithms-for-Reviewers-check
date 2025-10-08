@@ -12,6 +12,7 @@ from scipy.stats import norm, beta
 import matplotlib.pyplot as plt
 import time
 import csv
+from tqdm import tqdm
 
 np.random.seed(42)
 
@@ -29,6 +30,7 @@ bandwidth = 0.010 # 0.005
 
 # Confidence level
 alpha_values = [0.95, 0.96, 0.97, 0.98, 0.99]
+# alpha_values = [0.95]
 
 # LGD Shape parameters
 LGD_a, LGD_b = 2, 5
@@ -89,7 +91,7 @@ def var_varc_es_esc_pmc(d, alpha, LGD_a, LGD_b, simulation_runs, bandwidth=0.010
     n_repetitions = 10
         
     VaRs, VaRCs, Samples_varc= [], [], []
-    for _ in range(n_repetitions):
+    for _ in tqdm(range(n_repetitions)):
         epsilon, D, L = generate_samples_pmc(d, alpha, LGD_a, LGD_b, simulation_runs)
         VaR = np.percentile(L, alpha * 100)
         
@@ -151,6 +153,7 @@ Risk_Contributions = pd.DataFrame({
     }, index=['Obligor 1','Obligor 2','Obligor 3','Obligor 4','Obligor 5','Obligor 6','Obligor 7','Obligor 8','Obligor 9','Obligor 10']).T
 
 # Risk_Measures.to_csv('RhoS=0.5 VaR PMC.csv')
-Risk_Contributions.to_csv('RhoS=0.5 VaRC PMC bandwidth=0.01.csv')
+# Risk_Contributions.to_csv('RhoS=0.5 VaRC PMC bandwidth=0.01.csv')
 
+Risk_Contributions = Risk_Contributions.round(4)
 print(Risk_Contributions)
