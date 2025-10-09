@@ -38,10 +38,10 @@ LGD_a, LGD_b = 2, 5
 # rho
 rho = np.sqrt(0.5)
 
-# rho_S, correlation of PD and LGD
-rho_S = 0.5
-covariance_matrix = np.array([[1, rho_S],
-                              [rho_S, 1]])
+# tau, correlation of PD and LGD
+tau = 0.5
+covariance_matrix = np.array([[1, tau],
+                              [tau, 1]])
 
 # Z = np.random.multivariate_normal([0,0], covariance_matrix, simulation_runs)
 # Z_L = Z[:, 0]
