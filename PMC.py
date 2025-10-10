@@ -23,16 +23,16 @@ d = 10
 n_repetitions = 10
 
 # Simulation paths
-simulation_runs = 10000000 # 10000000 一千万是极限了 再算restarting kernal了
+simulation_runs = 10000000 # Enough
 
 # Bandwidth
-bandwidth = 0.005 # as same as CE_RQMC
+bandwidth = 0.01 # 0.01 better than 0.005, which is adopted in CE_RQMC.
 
 # Confidence level
 alpha_values = [0.95, 0.96, 0.97, 0.98, 0.99]
 
-# # Demo
-# alpha_values = [0.95]
+# Demo
+alpha_values = [0.95]
 
 # LGD Shape parameters
 LGD_a, LGD_b = 2, 5
@@ -87,7 +87,7 @@ def mean_se(array):
     se = np.std(array) / np.sqrt(len(array))
     return mean, se
 
-def var_varc_es_esc_pmc(d, alpha, LGD_a, LGD_b, simulation_runs, bandwidth=0.010):
+def var_varc_es_esc_pmc(d, alpha, LGD_a, LGD_b, simulation_runs, bandwidth):
     start_time = time.time()
     
     n_repetitions = 10

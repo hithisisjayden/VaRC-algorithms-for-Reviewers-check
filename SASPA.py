@@ -46,7 +46,7 @@ N_inner = 1000  # Number of inner simulations for L_{-i} and epsilon_i (e.g., 10
 reps = 10  # Number of repetitions for averaging and SE
 
 # Quadrature params
-N_gh = 16
+N_gh = 16 # Enough, 16 fast, 32 slow
 N_gl = 16
 
 
