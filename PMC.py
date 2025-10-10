@@ -26,10 +26,12 @@ n_repetitions = 10
 simulation_runs = 10000000 # 10000000 一千万是极限了 再算restarting kernal了
 
 # Bandwidth
-bandwidth = 0.010 # 0.005
+bandwidth = 0.005 # as same as CE_RQMC
 
 # Confidence level
 alpha_values = [0.95, 0.96, 0.97, 0.98, 0.99]
+
+# # Demo
 # alpha_values = [0.95]
 
 # LGD Shape parameters
