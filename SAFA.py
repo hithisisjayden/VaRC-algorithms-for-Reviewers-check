@@ -229,5 +229,5 @@ Risk_Contributions = pd.DataFrame({
     }, index=pd.Index([f'Obligor {i+1}' for i in range(N)])).T
 
 Risk_Contributions = Risk_Contributions.round(4)
-# Risk_Contributions.to_csv('RhoS=0.5 VaRC SAFA.csv')
+# Risk_Contributions.to_csv('VaRC SAFA.csv')
 print(Risk_Contributions)

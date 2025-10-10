@@ -152,8 +152,8 @@ Risk_Contributions = pd.DataFrame({
 
     }, index=['Obligor 1','Obligor 2','Obligor 3','Obligor 4','Obligor 5','Obligor 6','Obligor 7','Obligor 8','Obligor 9','Obligor 10']).T
 
-# Risk_Measures.to_csv('RhoS=0.5 VaR PMC.csv')
-# Risk_Contributions.to_csv('RhoS=0.5 VaRC PMC bandwidth=0.01.csv')
+# Risk_Measures.to_csv('VaR PMC.csv')
+# Risk_Contributions.to_csv('VaRC PMC.csv')
 
 Risk_Contributions = Risk_Contributions.round(4)
 print(Risk_Contributions)

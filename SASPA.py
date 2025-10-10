@@ -41,9 +41,9 @@ a_VaR_values = [1.1432, 1.3098, 1.5397, 1.8733, 2.4625]
 
 
 # Simulation parameters (modifiable)
-N_outer = 3000  # Number of outer simulations for Z (e.g., 1000 for testing, increase for accuracy)
+N_outer = 6000  # Number of outer simulations for Z (e.g., 1000 for testing, increase for accuracy)
 N_inner = 1000  # Number of inner simulations for L_{-i} and epsilon_i (e.g., 10000)
-reps = 20  # Number of repetitions for averaging and SE
+reps = 10  # Number of repetitions for averaging and SE
 
 # Quadrature params
 N_gh = 16
@@ -395,5 +395,5 @@ Risk_Contributions = pd.DataFrame(table_dict, index=cols).T
 
 Risk_Contributions = Risk_Contributions.round(4)
 print(Risk_Contributions)
-# Risk_Contributions.to_csv('RhoS=0.5 VaRC SASPA.csv')
+# Risk_Contributions.to_csv('VaRC SASPA.csv')
 
